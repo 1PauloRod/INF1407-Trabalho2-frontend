@@ -89,8 +89,13 @@ Este projeto é um **sistema de biblioteca online**, desenvolvido para permitir 
 ### Passos
 
 1. Clone o repositório:
+```bash
 - git clone <URL_DO_REPOSITORIO>
 - cd nome-do-projeto
+
+---
+
+2. 
 
   
 
