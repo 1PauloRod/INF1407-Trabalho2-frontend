@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../style/register.css">
 </head>
 <body>
+
     <div class="container">
 
-        <form id="register-form">
-
-            <h1>Cadastro</h1>
-            <input id="name" placeholder="Nome" type="text" required>
-            <input id="last-name" placeholder="Sobrenome" type="text" required>
-            <input id="email" placeholder="Email" type="email" required>
-            <input id="password" placeholder="Senha" type="password" required>
-
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
+        <form id="register-form" class="card">
+    <h1>Cadastro</h1>
 
     <div id="message"></div>
 
+    <input id="name" placeholder="Nome" type="text" required>
+    <input id="last-name" placeholder="Sobrenome" type="text" required>
+    <input id="email" placeholder="Email" type="email" required>
+    <input id="password" placeholder="Senha" type="password" required>
+    <input id="password2" placeholder="Confirme a senha" type="password" required>
 
-</body>
+    <button type="submit" class="btn">Cadastrar</button>
+
+    <p class="link">
+        Já tem uma conta?
+        <a href="login.html">Entrar</a>
+    </p>
+</form>
+        
+    </div>
+
     <script type="module" src="../dist/register.js"></script>
+</body>
 </html>

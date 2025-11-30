@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { apiPost } from "./api.js";
 function logout() {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield apiPost("/accounts/logout/", {}, true);
+        const response = yield apiPost("/accounts/logout/", {}, true, "POST");
         if (response.ok) {
             localStorage.removeItem("token");
             window.location.href = "../pages/login.html";

@@ -1,6 +1,6 @@
 const API_URL = "http://127.0.0.1:8000";
 
-export async function apiPost(endpoint: string, data: any, useAuth: boolean = true) {
+export async function apiPost(endpoint: string, data: any, useAuth: boolean = true, method = "POST") {
     const headers: any = {
         "Content-Type": "application/json"
     };
@@ -13,9 +13,9 @@ export async function apiPost(endpoint: string, data: any, useAuth: boolean = tr
     }
 
     const response = await fetch(API_URL + endpoint, {
-        method: "POST",
+        method: method,
         headers,
-        body: JSON.stringify(data)
+        body: method === "DELETE" ? null : JSON.stringify(data)
     });
 
     return response;

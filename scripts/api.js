@@ -1,16 +1,28 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.API_URL = void 0;
-exports.apiPost = apiPost;
-exports.API_URL = "http://127.0.0.1:8000";
-async function apiPost(endpoint, data) {
-    const response = await fetch(exports.API_URL + endpoint, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
+const API_URL = "http://127.0.0.1:8000";
+export async function apiPost(endpoint, data, useAuth = true, method = "POST") {
+    const headers = {
+        "Content-Type": "application/json"
+    };
+    if (useAuth) {
+        const token = localStorage.getItem("token");
+        if (token) {
+            headers["Authorization"] = `Token ${token}`;
+        }
+    }
+    const response = await fetch(API_URL + endpoint, {
+        method: method,
+        headers,
+        body: method === "DELETE" ? null : JSON.stringify(data)
     });
     return response;
 }
-//# sourceMappingURL=api.js.map
+export async function apiGet(endpoint) {
+    const token = localStorage.getItem("token");
+    const response = await fetch(API_URL + endpoint, {
+        method: "GET",
+        headers: {
+            "Authorization": `Token ${token}`
+        }
+    });
+    return response;
+}

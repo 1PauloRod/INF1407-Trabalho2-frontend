@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ES6",
-    "outDir": "./dist",
+    "target": "es2017",
+    "lib": ["dom", "es2017"], 
+    "module": "esnext",
     "strict": true,
-    "noEmitOnError": false
-  },
-  "include": ["scripts/**/*"]
+    "esModuleInterop": true
+  }
 }

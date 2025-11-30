@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const API_URL = "http://127.0.0.1:8000";
 export function apiPost(endpoint_1, data_1) {
-    return __awaiter(this, arguments, void 0, function* (endpoint, data, useAuth = true) {
+    return __awaiter(this, arguments, void 0, function* (endpoint, data, useAuth = true, method = "POST") {
         const headers = {
             "Content-Type": "application/json"
         };
@@ -20,9 +20,9 @@ export function apiPost(endpoint_1, data_1) {
             }
         }
         const response = yield fetch(API_URL + endpoint, {
-            method: "POST",
+            method: method,
             headers,
-            body: JSON.stringify(data)
+            body: method === "DELETE" ? null : JSON.stringify(data)
         });
         return response;
     });

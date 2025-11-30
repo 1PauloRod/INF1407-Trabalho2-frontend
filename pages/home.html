@@ -1,4 +1,4 @@
-esta é a home<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -9,17 +9,27 @@ esta é a home<!DOCTYPE html>
 </head>
 <body>
 
-    <div class="container">
+    <div class="container card">
+
+    <div class="header-area">
         <h1 id="name">Carregando...</h1>
+        <div id="message"></div>
+        <button id="meus-emprestimos-btn" class="btn full">📚 Meus livros alugados</button>
 
-        <h2>📚 Lista de Livros</h2>
-        <input type="text" id="search" placeholder="Pesquisar livro..." />
-        <button id="search-btn">Buscar</button>
+        <h2>Lista de Livros</h2>
 
-        <ul id="book-list"></ul>
-
-        <button id="logout-btn">Sair</button>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Pesquisar livro..." />
+            <button id="search-btn" class="btn small">Buscar</button>
+        </div>
     </div>
+
+    <ul id="book-list" class="book-list"></ul>
+
+    <button id="trocar-senha-btn" class="btn warn">Trocar senha</button>
+    <button id="logout-btn" class="btn danger">Sair</button>
+</div>
+
 
     <script type="module" src="../dist/home.js"></script>
     <script type="module" src="../dist/logout.js"></script>

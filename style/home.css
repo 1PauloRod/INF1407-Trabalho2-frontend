@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4f46e5, #6d28d9);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    border: 2px solid black;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-area {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding-bottom: 10px;
+    z-index: 10;
+}
+
+h1, h2 {
+    margin-bottom: 16px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn.full {
+    width: 100%;
+}
+
+.btn.small {
+    padding: 10px 18px;
+}
+
+.btn.warn {
+    background: #d97706;
+}
+
+.btn.warn:hover {
+    background: #b45309;
+}
+
+.btn.danger {
+    background: #dc2626;
+}
+
+.btn.danger:hover {
+    background: #b91c1c;
+}
+
+.btn:hover {
+    background: #4338ca;
+}
+
+.book-list {
+    list-style: none;
+    padding: 0;
+
+    max-height: 40vh;
+    overflow-y: auto;
+    padding-right: 5px;
+
+    scroll-behavior: smooth; /* ← scroll suave */
+}
+
+/* barra de rolagem mais bonita (chrome/edge) */
+.book-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.book-list::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border-radius: 10px;
+}
+
+.book-list::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 10px;
+}
+
+.book-list li {
+    padding: 12px;
+    background: #f3f4f6;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #4f46e5;
+}
+
+.book-list button {
+    margin-left: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f4f6;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #4f46e5;
+    gap: 10px;
+}
+
+.book-item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-item .title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.book-item .author {
+    font-size: 14px;
+    color: #555;
+}
+
+.book-item .status {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #111;
+}
+
+.book-list {
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f4f6;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 4px solid #4f46e5;
+    gap: 12px;
+}
+
+.book-item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-item .actions button {
+    margin-left: auto;
+}
+
+
+#message {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: center;
+    display: none;
+}
+
+#message.sucesso {
+    background: #16a34a;
+    color: white;
+}
+
+#message.erro {
+    background: #dc2626;
+    color: white;
+}
+

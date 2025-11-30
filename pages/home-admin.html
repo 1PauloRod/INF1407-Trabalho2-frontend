@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Bibliotecário</title>
+
+    <link rel="stylesheet" href="../style/admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Olá, admin</h1>
+        <h2>📚 Gerenciamento de Livros</h2>
+
+        <button id="add-btn">➕ Adicionar Livro</button>
+        <input type="text" id="search" placeholder="Pesquisar livro..." />
+        <button id="search-btn">Buscar</button>
+        
+        <ul id="book-list"></ul>
+
+        <button id="logout-btn">Sair</button>
+    </div>
+
+    <script type="module" src="../dist/home_admin.js"></script>
+    <script type="module" src="../dist/logout.js"></script>
+</body>
+</html>
