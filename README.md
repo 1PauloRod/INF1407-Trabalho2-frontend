@@ -46,7 +46,6 @@ Este projeto é um **sistema de biblioteca online**, desenvolvido para permitir 
 ## O que Não Funcionou
 
 - **Recuperação de senha de usuário**: funcionalidade não implementada.  
-- Nenhuma outra funcionalidade principal apresentou falha; todos os fluxos testados funcionam corretamente.  
 
 ---
 
@@ -92,10 +91,44 @@ Este projeto é um **sistema de biblioteca online**, desenvolvido para permitir 
 ```bash
 - git clone <URL_DO_REPOSITORIO>
 - cd nome-do-projeto
+```
+
+2. Crie e ative um ambiente virtual:
+```bash
+  python -m venv venv
+# Linux/macOS
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+```
+
+3. Instale as dependências do Python:
+```bash
+pip install -r requirements.txt
+```
+
+4. Configure o banco de dados e aplique as migrations:
+```bash
+python manage.py migrate
+```
+
+5. (Opcional) Crie um superusuário para testes administrativos:
+```bash
+python manage.py createsuperuser
+```
+
+6. Compile o TypeScript/JS usando npx:
+```bash
+npx tsc
+```
 
 ---
 
-2. 
+## Tecnologias Utilizadas
 
-  
+Frontend: HTML5, CSS3, TypeScript, JavaScript.
+Backend: Django, Django REST Framework, Django Token Authentication.
+Banco de Dados: SQLite / PostgreSQL.
+Outras: LocalStorage para persistência de token, API REST para comunicação frontend-backend.
 
+   
