@@ -131,4 +131,10 @@ npx tsc
 - Banco de Dados: SQLite.
 - Outras: LocalStorage para persistência de token, API REST para comunicação frontend-backend.
 
+---
+
+## Link do projeto
+
+  - https://paulorod.pythonanywhere.com/
+
    
